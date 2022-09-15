@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class WebDriver {
+public class CreateLead {
 
 	public static void main(String[] args) { 
 		WebDriverManager.chromedriver().setup(); 
@@ -35,8 +35,9 @@ public class WebDriver {
 		driver.findElement(By.id("createLeadForm_description")).sendKeys(" ");
 		//email in the E-mail address Field using the locator of your choice
 		driver.findElement(By.id("createLeadForm_primaryEmail")).sendKeys("mythilisabarish@gmail.com");
-	
+		driver.findElement(By.id("createLeadForm_primaryPhoneNumber")).sendKeys("+91 7373747479");
 		driver.findElement(By.className("smallSubmit")).click();
+	
 		String Title=driver.getTitle();
 		
 	}

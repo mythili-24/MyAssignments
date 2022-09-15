@@ -31,6 +31,7 @@ public class DuplicateLead {
 		driver.findElement(By.id("createLeadForm_companyName")).sendKeys("Test Leaf Pvt Ltd");
 		driver.findElement(By.id("createLeadForm_firstName")).sendKeys("Mythili");
 		driver.findElement(By.id("createLeadForm_lastName")).sendKeys("sabarish");
+		driver.findElement(By.id("createLeadForm_primaryPhoneNumber")).sendKeys("+91 7373747479");
 		driver.findElement(By.className("smallSubmit")).click();
 		
 		
@@ -52,6 +53,7 @@ public class DuplicateLead {
         driver.findElement(By.id("createLeadForm_description")).sendKeys(" ");
         //email in the E-mail address Field using the locator of your choice
         driver.findElement(By.id("createLeadForm_primaryEmail")).sendKeys("mythilivijayakumar@gmail.com");
+        driver.findElement(By.id("createLeadForm_primaryPhoneNumber")).sendKeys("7373747479");
         //Click on Create Button
         driver.findElement(By.className("smallSubmit")).click();
         String Title=driver.getTitle();
