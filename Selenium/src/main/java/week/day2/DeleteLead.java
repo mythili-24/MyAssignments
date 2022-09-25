@@ -45,8 +45,8 @@ public class DeleteLead {
 		driver.findElement(By.xpath("//button[text()='Find Leads']")).click();
 		
 		String message = driver.findElement(By.className("x-paging-info")).getText();
-System.out.println(message);
-driver.close();
+        System.out.println(message);
+        driver.close();
 		
 		
 		
