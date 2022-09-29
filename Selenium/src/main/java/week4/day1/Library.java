@@ -33,4 +33,3 @@ public class Library {
 
 
 
-//table[@caption='The Three Most Popular JavaScript Libraries']
