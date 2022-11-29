@@ -1,6 +1,7 @@
 package Marathon1;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -18,14 +19,15 @@ public class Oppurtunities {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		WebDriverManager.chromedriver().setup(); 
-		ChromeDriver driver=new ChromeDriver();
+		 //disable notifications
+        ChromeOptions ch=new ChromeOptions();
+        ch.addArguments("--disable-notifications");
+		ChromeDriver driver=new ChromeDriver(ch);
 		driver.get("https://login.salesforce.com/?locale=in");
 		
         //disable notifications
-        ChromeOptions ch=new ChromeOptions();
-        ch.addArguments("--disable-notifications");
-        ChromeDriver drive=new ChromeDriver(ch);
-	
+        
+       	
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(30));
 		driver.findElement(By.id("username")).sendKeys("ramkumar.ramaiah@testleaf.com");
@@ -39,9 +41,28 @@ public class Oppurtunities {
 		Thread.sleep(8000);
 		
 
-		driver.findElement(By.xpath("(//div[@data-name='Sales']//div)[2]")).click();
+		driver.findElement(By.xpath("//p[text()='Sales']")).click();
 		Thread.sleep(3000);
 		//Click on Opportunity tab 
-		driver.findElement(By.xpath("//span[text()='Opportunities']")).click();
+		driver.findElement(By.xpath("//a[@title='Opportunities']/parent::one-app-nav-bar-item-root")).click();
+		//Click on New button
+		driver.findElement(By.xpath("//div[text()='New']/parent::a")).click();
+		
+		//Enter 'your name' as account name
+		driver.findElement(By.xpath("//div[@role='none']/input")).sendKeys("Mythili");
+		
+		//choose close date
+		driver.findElement(By.xpath("(//button[@type='button']/parent::lightning-button-icon)[4]")).click();
+		
+		//click stage(Needs Analysis)
+									
+		//click save
+				
+		//verify message
+				
+		// Close the Browser
+
+		
+		
 }
 }

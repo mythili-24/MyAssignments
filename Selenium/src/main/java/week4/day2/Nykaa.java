@@ -111,7 +111,7 @@ public class Nykaa {
 		//17) Check if this grand total is the same in step 14
 		
 		//18) Close all windows
-		//driver.close();
+		driver.quit();
 		
 		
 	    

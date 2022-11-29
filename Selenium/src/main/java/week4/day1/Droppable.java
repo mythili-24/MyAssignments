@@ -22,6 +22,7 @@ public class Droppable {
 
 	    Actions builder=new Actions(driver);
 	    builder.contextClick(rightclick).perform();
+	    
 
         
 	}
